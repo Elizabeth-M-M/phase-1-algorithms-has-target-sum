@@ -1,6 +1,16 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for(let i=0; i<array.length; i++){
+    let rem = target - array[i];
+    for(let j=i+1;j<array.length; j++){
+      if(rem === array[j]){
+        return true
+      }
+    }
+  }
+  return false
+  
 }
+console.log(hasTargetSum([3, 8, 12, 4, 11, 7], 10))
 
 /* 
   Write the Big O time complexity of your function here
